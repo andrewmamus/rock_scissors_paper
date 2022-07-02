@@ -4,10 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper and Scissors Game</title>
 </head>
 <body>
-    
+    <header>
+        
+        <nav>
+            <ul>
+                <li><h3>Player </h3></li>
+                <h1>Muyon<strong> Games</strong></h1>
+                <li><h3>Computer</h3></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="game_container">
+       
+        
+        <section class="game_start_container">
+            <div class="overlay">
+                <div class="game_description">
+                    <h3>Welcome to Rock Scissors Paper game. </h3>
+                    <p>This game uses political Aspirant in Nigeria as character.
+                        This is not to insult or disrepute the candidate you do support but all for fun.</p>
+                    <p>In the game you play 5 times and the rules are simple as you play but first choose a character.</p>
+                </div>
+                
+                <button class="start_game_btn">START</button>
+            </div>
+            
+        </section>
+        
+        <section class="selectPlayers">
+            <div class="select_wrapper">
+                <h3>Please select your character</h3>
+                
+                <div class="select_flex">
+                    <div class="player card">
+                        <h4>Player</h4>
+                        <img class="player_img"src="./image/charcters/pc1.png" alt="player">
+                        <div class="card_text">
+                            
+                            <button class="pPrev">&ltcir;</button> 
+                            <button class="select_playerCh">Select</button> 
+                            <button class="pNext">&gtcir;</button>  
+                        </div>
+                        
+                         
+                    </div>
+                    
+                    <div class="computer card">
+                        <h4>Computer A/I</h4>
+                        <img class="computer_img" src="./image/charcters/pc1.png" alt="computer">
+                        <div class="card_text">
+                       
+                        <button class="cPrev">&ltcir;</button>
+                        <button class="select_comCh">Select</button>   
+                        <button class="cNext">&gtcir;</button>  
+                        </div> 
+                    </div>
+                </div>
+                
+                <button class="game_show">Play</button>
+            </div>
+        </section>
+        
+        <section class="display_game">
+            <div class="overlay">
+                <div class="result">
+                    <h3 class="mygame"></h3>
+                    <h3 class="message"></h3>
+                    <h3 class="win-loss"></h3>
+                </div>  
+             <div class="players_indicator">
+                <img src="" alt="player" class="playerImage">
+                    <h3>VS </h3>
+                <img src="" alt="computer   " class="computerImage">
+             </div>
+            <div class="play">
+                <button class="btn btn-rock">Rock</button>
+                <button class="btn btn-paper">Paper</button>
+                <button class="btn btn-scissors">Scissors</button> 
+            </div>
+            
+          
+           
+            </div>
+            
+        </section>
+        
+       
+            
+            <audio autoplay="true"  src="./bgmusic.mp3" loop> 
+            </audio> 
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>
