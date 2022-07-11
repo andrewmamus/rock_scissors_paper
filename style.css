@@ -7,47 +7,42 @@
 
 
 html{
-    font-family: 'Press Start 2P', cursive;
-    background-image: url('./image/bg.jpg');
+    font-family:  cursive;
     background-size: cover;
     background-repeat: no-repeat;
     height:100vh ;
     overflow-x: hidden;
+    background-color: #051937;
+    
 }
 
 header{
     color:#fff;
     background-color: #1b0766;
     text-align:center;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding-left:11%;
-    padding-right:11%;
     width: 100%;
+    margin-bottom: 80px;
 }
 
 nav{
-    width: 100%;
+    width: inherit;
 }
 ul{
-    
-    width:100%;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
-ul h1{
-    width:30%;
-}
+
 ul li{
     list-style: none;
     padding:0;
     margin:0;
-    width:40%;
     background-color: seagreen;
+    padding:20px;
 }
-li h2{
-    font-size:0.5rem;
+li h1{  
+       font-size:0.5rem;
     
 }
 
@@ -68,12 +63,13 @@ li h2{
 }
 
 .overlay{
-    width: 70%;
-    height: 80%;
+    width: 80%;
+    height: auto;
     background-color:rgba(27, 7, 102, 0.7) ;
     border-radius: 8px;
-    box-shadow: 0 0 30px #7cf3e2;
+    box-shadow: 0 0 25px #7cf3e2;
     text-align: center;
+    padding-bottom: 80px;
 }
 .start_game_btn{
     border:none;
@@ -86,14 +82,11 @@ li h2{
     box-shadow: 0 0 10px #7cf3e2;
     font-size:1.5em;
 }
-.start_game_btn:active{
-    box-shadow: 0 0 50px #fde500!important;
-    transition:background-color cubic-bezier(.68,-0.28,.44,1.2)  0.7s;
-}
+
 
 .start_game_btn:hover{
     box-shadow: 0 0 30px #7cf3e2;
-    transition:box-shadow cubic-bezier(.68,-0.28,.44,1.2)  0.5s;
+    transition:box-shadow cubic-bezier(.68,-0.28,.44,1.2)  0.1s;
 }
 
 /* Start Game */
@@ -121,29 +114,36 @@ li h2{
 
 
 /* Select Player */
-.select_wrapper{
+.selectPlayers{
     width:80%;
-    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-h3{
+
+.select_wrapper h3{
+    margin-top:150px;
     color: #7cf3e2;
-    margin-bottom: 20px;
     font-size: larger;
     text-shadow:2px 2px 0 #1b0766;
 }
+.select_wrapper{
+    text-align: center;
+    margin-top:150px;
+}
+
 .select_flex{
     width:100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+    margin-top:10px;
 }
 .card{
     background:white;
     border-radius:10px;
-    width: 20rem;
-    height: 25rem;
-    margin-bottom: 20px; 
+    width: 300px;
+    height: 400px;
+    padding-bottom:10px;
+    margin-bottom: 20px;;
 }
 
 
@@ -160,7 +160,7 @@ h3{
 
 .card_text button:active{
    font-size: 1.5em;
-   transition: font-size cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+   transition: font-size cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
 }
 
 
@@ -205,6 +205,7 @@ img{
 .display_game{
     transform: translateX(-100vw);
     height: 90vh;
+    color: #fff;
     width:99vw;
     display: flex;
     align-items: center;
@@ -214,85 +215,59 @@ img{
 .players_indicator{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding-left:5%;
     padding-right:5%;
 }
 
 .playerImage, .computerImage{
-    width:15rem;
-    height:15rem;
+    width:10rem;
+    height:10rem;
     border: 10px solid #7cf3e2;
     border-radius:50%;
     position:relative;
 }
 
-@keyframes btnbuble {
-    from{
-        margin-top: -50px;
-    }
-    to{
-        margin-top: 0px;
-    }
-}
-.play{
-    position: relative;
-}
+
+
 .btn{
-    margin-top:-120px;
-    width:120px;
-    height: 120px;
+    width: 100px;
+    text-align: center;
+    margin:40px 10px 0 10px;
     font-family: inherit;
+    background-color: #051937;
+    border:none;
+    border-radius: 5px;
+    border:2px solid seagreen;
     color:white;
     text-shadow:#1b0766 2px 2px 3px;
-    border:none;
-    position: absolute;
-}
-button.btn-rock{
-    
-    border-radius: 39% 61% 67% 33% / 44% 33% 67% 56% ;
-    background-image: linear-gradient(
-        0deg,
-        hsl(12deg 98% 49%) 0%,
-        hsl(19deg 100% 50%) 15%,
-        hsl(24deg 100% 50%) 25%,
-        hsl(29deg 100% 50%) 33%,
-        hsl(34deg 100% 50%) 40%,
-        hsl(38deg 100% 50%) 47%,
-        hsl(43deg 100% 50%) 55%,
-        hsl(47deg 100% 50%) 64%,
-        hsl(51deg 100% 50%) 76%,
-        hsl(55deg 100% 50%) 100%
-      );
-    right:18rem; 
-    animation-name: btnbuble;
-    animation-duration: 5s;
-    animation-delay: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function:cubic-bezier(0.23, 1, 0.320, 1) 1s
+    padding: 10px;
+    cursor: pointer;
 }
 
-.btn-scissors{
-    border-radius:85% 15% 52% 48% / 48% 46% 54% 52% ;
-    background-image: linear-gradient(to right top, #051937, #004770, #007c9e, #00b4b6, #12ebb7);
-    animation-name: btnbuble;
-    animation-duration: 4s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    left:18rem;
-    animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s
+.btn:hover{
+    background-color: #fff;
 }
 
-.btn-paper{
-    border-radius:22% 78% 85% 15% / 48% 80% 20% 52% ;
-    top:-6rem;
-    right:30rem;
-    background: -webkit-linear-gradient(to right, #0575E6, #00F260); 
-    background: linear-gradient(to right, #0575E6, #00F260); 
-    animation-name: btnbuble;
-    animation-duration: 8s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function:ease-in-out 1s
-}
 
+@media screen and (min-width:960px) {
+   .select_flex{
+    width:900px;
+    display:flex;
+    justify-content: space-between;
+   } 
+   
+   .select_wrapper{
+    padding-top: 0;
+    margin-top:0;
+   }
+   
+   .select_wrapper h3{
+    margin-top:0;
+   }
+   
+   .display_game .overlay{
+    padding-top:30px;
+   }
+}

@@ -11,7 +11,7 @@ function computerPlay() {
 }
 // score card
 let playerScore = 0;
-let computerScore = 0
+let computerScore = 0;
 //Play a round
 function playRound(playerSelection, computerSelection){
     if(playerSelection === computerSelection){
